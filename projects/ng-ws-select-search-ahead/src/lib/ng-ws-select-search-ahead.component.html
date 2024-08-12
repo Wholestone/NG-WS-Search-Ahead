@@ -15,14 +15,14 @@
   </div>
 
   <div [class]="overlayClasses + ' multiselect__overlay'"
-       [ngClass]="{'show__overlay': searchAheadService.openedState}">
+       [ngClass]="{'show__overlay': _searchAheadService.openedState}">
     <div [class]="searchWrapperClasses + ' multiselect__search'"
          [ngClass]="{'with__select__all': !hideCheckboxes}">
       @if (!hideCheckboxes && isMultiple) {
         <input [class]="checkboxClasses + ' select__all'"
                type="checkbox"
                [disabled]="pending"
-               [checked]="searchAheadService.allSelected"
+               [checked]="_searchAheadService.allSelected"
                (change)="toggleSelectAll($event)">
       }
 
@@ -30,7 +30,7 @@
         <input class="search__input"
                type="text"
                [disabled]="pending"
-               [(ngModel)]="searchAheadService.searchValue"
+               [(ngModel)]="_searchAheadService.searchValue"
                (input)="filterItems($event)">
 
         <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
@@ -58,7 +58,7 @@
         }
       </div>
     } @else {
-      @for (item of searchAheadService.filteredItems; track item[optionLabel]; let idx = $index) {
+      @for (item of _searchAheadService.filteredItems; track item[optionLabel]; let idx = $index) {
         <label [class]="itemClasses + ' multiselect__item'"
                [for]="'item-' + idx">
           @if (!hideCheckboxes) {
@@ -71,7 +71,7 @@
 
           <span [class]="itemLabelClasses + ' item__label'"
                 [ngStyle]="setHighlightColorVariableForCSS()"
-                [innerHTML]="item[optionLabel] | highlightSearch: searchAheadService.searchValue"></span>
+                [innerHTML]="item[optionLabel] | highlightSearch: _searchAheadService.searchValue"></span>
         </label>
       } @empty {
         <div [class]="noDataClasses + ' multiselect__no__data'">
