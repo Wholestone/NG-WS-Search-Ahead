@@ -10,15 +10,16 @@
   "keywords": [
     "angular",
     "angular-17",
-    "video-player",
-    "angular-video-player",
-    "angular-17-video-player"
+    "angular-select",
+    "angular-multiselect",
+    "highlighted-search",
+    "angular-17-search-highlighted"
   ],
   "engines": {
     "node": ">=20.15.0"
   },
   "scripts": {
-    "build": "ng build ng-ws-video-player"
+    "build": "ng build ng-ws-select-search-ahead"
   },
   "peerDependencies": {
     "@angular/common": "^17.3.0",
