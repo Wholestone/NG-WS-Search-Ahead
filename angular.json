@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ng-ws-select-search-ahead": {
+      "projectType": "library",
+      "root": "projects/ng-ws-select-search-ahead",
+      "sourceRoot": "projects/ng-ws-select-search-ahead/src",
+      "prefix": "ws",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-ws-select-search-ahead/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-ws-select-search-ahead/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-ws-select-search-ahead/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ng-ws-select-search-ahead/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "ng-ws-select-search-ahead",
+  "version": "0.0.0",
+  "author": "WholeStone",
+  "description": "A customizable select/multiselect for Angular 17 applications.",
+  "repository": {
+    "url": "https://github.com/Wholestone/NG-WS-Select-Search-Ahead",
+    "type": "git"
+  },
+  "keywords": [
+    "angular",
+    "angular-17",
+    "video-player",
+    "angular-video-player",
+    "angular-17-video-player"
+  ],
+  "engines": {
+    "node": ">=20.15.0"
+  },
+  "scripts": {
+    "build": "ng build ng-ws-video-player"
+  },
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "^17.3.4",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/github": "^10.1.0",
+    "@semantic-release/git": "^10.0.1"
+  },
+  "sideEffects": false
+}
