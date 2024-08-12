@@ -1,6 +1,6 @@
 {
   "name": "ng-ws-select-search-ahead",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "WholeStone",
   "description": "A customizable select/multiselect for Angular 17 applications.",
   "repository": {
